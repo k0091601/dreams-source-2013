@@ -857,7 +857,13 @@ void ProcessModels (void)
 	}
 
 	// Turn the skybox into a cubemap in case we don't build env_cubemap textures.
-	Cubemap_CreateDefaultCubemaps();
+	
+	/**
+	// RedEyes : 30 july 2013
+	// Prevent the default cube maps generation during the build of the level in vbsp.exe
+	// This modification is not intended to stay int that state, valve must fix the issue.
+	//Cubemap_CreateDefaultCubemaps();
+	*/
 	EndBSPFile ();
 }
 

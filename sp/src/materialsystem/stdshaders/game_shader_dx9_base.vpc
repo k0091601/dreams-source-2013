@@ -56,6 +56,8 @@ $Project
 
 		$File	"Bloom.cpp"
 		$File	"screenspace_general.cpp"
+		$File	"post_blur.cpp"
+		$File	"post_dof.cpp"
 	}
 
 	$Folder	"Header Files"

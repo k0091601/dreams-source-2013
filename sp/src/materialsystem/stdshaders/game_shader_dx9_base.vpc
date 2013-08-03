@@ -56,8 +56,12 @@ $Project
 
 		$File	"Bloom.cpp"
 		$File	"screenspace_general.cpp"
-		$File	"post_blur.cpp"
-		$File	"post_dof.cpp"
+		
+		$File "DepthOfField_dx9.cpp"
+		
+		//$File "multiblend.cpp"
+		//$File "multiblend_dx9_helper.cpp"
+		
 	}
 
 	$Folder	"Header Files"
@@ -71,6 +75,8 @@ $Project
 		$File	"shader_constant_register_map.h"
 
 		$File	"example_model_dx9_helper.h"
+		
+		//$File "multiblend_dx9_helper.h"
 	}
 
 	$Folder	"Link Libraries" [$WIN32]

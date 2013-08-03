@@ -15,6 +15,8 @@ SDK_screenspaceeffect_vs20.fxc
 
 SDK_bloomadd_ps2x.fxc
 
-Post_dof_ps20.fxc
-Post_blur_ps20.fxc
-//Post_screenspaceeffect_vs20.fxc
+depth_of_field_ps20b.fxc
+depth_of_field_vs20.fxc
+
+//multiblend_ps2x.fxc
+//multiblend_vs20.fxc

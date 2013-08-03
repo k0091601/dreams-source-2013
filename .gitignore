@@ -24,6 +24,7 @@ ipch
 # Shader Authoring
 *.vcs
 *.inc
+*.vpc.sentinel
 
 # OSX/Linux build products
 *.mak

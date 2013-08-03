@@ -21,7 +21,9 @@ ipch
 *.vcxproj.filters
 *.vcxproj.vpc_crc
 *.sln
-
+# Shader Authoring
+*.vcs
+*.inc
 
 # OSX/Linux build products
 *.mak

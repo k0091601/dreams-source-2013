@@ -1732,7 +1732,10 @@ bool HTML::OnStartRequest( const char *url, const char *target, const char *pchP
 			Panel *targetPanel = m_CustomURLHandlers[i].hPanel;
 			if (targetPanel)
 			{
-				PostMessage(targetPanel, new KeyValues("CustomURL", "url", m_CustomURLHandlers[i].url ) );
+				//PostMessage(targetPanel, new KeyValues("CustomURL", "url", m_CustomURLHandlers[i].url ) );
+				/* AlanEdwardes - (https://github.com/alanedwardes) */
+				// Notes : Added protocol to the vgui::HTML custom URL handler message (as in Source 2007).
+				PostMessage(targetPanel, new KeyValues("CustomURL", "url", url + strlen(m_CustomURLHandlers[i].url) + 3, "protocol", m_CustomURLHandlers[i].url));
 			}
 
 			bURLHandled = true;

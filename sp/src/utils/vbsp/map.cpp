@@ -2001,9 +2001,10 @@ void CMapFile::CheckForInstances( const char *pszFileName )
 	}
 
 	char	FDGPath[ MAX_PATH ];
+	// VBSP now checks all search paths for an FGD file.   @alanedwardes  (value changed from "" to NULL)
 	if ( !g_pFullFileSystem->RelativePathToFullPath( GameDataFile, "EXECUTABLE_PATH", FDGPath, sizeof( FDGPath ) ) )
 	{
-		if ( !g_pFullFileSystem->RelativePathToFullPath( GameDataFile, "", FDGPath, sizeof( FDGPath ) ) )
+		if ( !g_pFullFileSystem->RelativePathToFullPath( GameDataFile, NULL, FDGPath, sizeof( FDGPath ) ) )
 		{
 			Msg( "Could not locate GameData file %s\n", GameDataFile );
 		}

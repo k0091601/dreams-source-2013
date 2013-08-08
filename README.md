@@ -26,6 +26,7 @@ Note : I am a beginner with both Git and git CLient (smartGit), so i am not able
  
 -  alanedwardes ( https://github.com/alanedwardes ) 
  -  Added protocol to the vgui::HTML custom URL handler message (as in Source 2007).
+ - VBSP now checks all search paths for an FGD file.   @alanedwardes  (value changed from "" to NULL)
 
 - FlaminSarge ( https://github.com/FlaminSarge )
  - Fixed functionality of player jingles in SP/MP c_baseplayer.cpp  

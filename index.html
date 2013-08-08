@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dreams-Source by fuzzzzzz</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/fuzzzzzz/source-sdk-2013">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/fuzzzzzz/source-sdk-2013/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/fuzzzzzz/source-sdk-2013/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Dreams-Source</h1>
+          <p>The Dreams edition of the Source SDK 2013</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/fuzzzzzz">fuzzzzzz</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>
+<a name="objectives" class="anchor" href="#objectives"><span class="octicon octicon-link"></span></a>Objectives</h2>
+
+<p>At that time, this repository is a sort of personal sandbox  </p>
+
+<p>Next Time, This repository will be proposed to a french game developper community as learning materials on <a href="http://www.game-lab.com">www.game-lab.com</a>.
+The web site is partially ported on Wordpress.</p>
+
+<p>I would be glad to receive pull Request to merge with that version</p>
+
+<ul>
+<li>Bugs fixed on various plateform like linux &amp; macOSX are greatly appreciated, as i am working with a Windows 7 x64 Environment.</li>
+</ul><h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>Note : I am a beginner with both Git and git CLient (smartGit), so i am not able right now to merge bug fixed from different upstream then the Valve Repo and my own Branches.</p>
+
+<ul>
+<li>
+<p>John McBroom jimbomcb ( <a href="https://github.com/jimbomcb">https://github.com/jimbomcb</a> )</p>
+
+<ul>
+<li>Fixed typo causing makefile to not copy to _srv.so binaries on compile.</li>
+<li>Fixed g_StringTableGameRules not being reset allowing server/client gamerules to get out of sync. </li>
+</ul>
+</li>
+<li>
+<p>yaakov-h ( <a href="https://github.com/yaakov-h">https://github.com/yaakov-h</a> )</p>
+
+<ul>
+<li>Compiler warning fixes in NPC, bugbait and beam_shared</li>
+</ul>
+</li>
+<li>
+<p>alanedwardes ( <a href="https://github.com/alanedwardes">https://github.com/alanedwardes</a> ) </p>
+
+<ul>
+<li> Added protocol to the vgui::HTML custom URL handler message (as in Source 2007).</li>
+<li>VBSP now checks all search paths for an FGD file.</li>
+</ul>
+</li>
+<li>
+<p>FlaminSarge ( <a href="https://github.com/FlaminSarge">https://github.com/FlaminSarge</a> )</p>
+
+<ul>
+<li>Fixed functionality of player jingles in SP/MP c_baseplayer.cpp<br>
+</li>
+</ul>
+</li>
+<li>
+<p>Biohazard</p>
+
+<ul>
+<li>Source Shader Editor 0.5 ( <a href="https://developer.valvesoftware.com/wiki/Category:SourceShaderEditor">https://developer.valvesoftware.com/wiki/Category:SourceShaderEditor</a> )</li>
+</ul>
+</li>
+</ul><h2>
+<a name="source-1-sdk-license" class="anchor" href="#source-1-sdk-license"><span class="octicon octicon-link"></span></a>SOURCE 1 SDK LICENSE</h2>
+
+<p>Source SDK Copyright(c) Valve Corp.  </p>
+
+<p>THIS DOCUMENT DESCRIBES A CONTRACT BETWEEN YOU AND VALVE 
+CORPORATION ("Valve").  PLEASE READ IT BEFORE DOWNLOADING OR USING 
+THE SOURCE ENGINE SDK ("SDK"). BY DOWNLOADING AND/OR USING THE 
+SOURCE ENGINE SDK YOU ACCEPT THIS LICENSE. IF YOU DO NOT AGREE TO 
+THE TERMS OF THIS LICENSE PLEASE DON’T DOWNLOAD OR USE THE SDK.  </p>
+
+<p>You may, free of charge, download and use the SDK to develop a modified Valve game 
+running on the Source engine.  You may distribute your modified Valve game in source and 
+object code form, but only for free. Terms of use for Valve games are found in the Steam 
+Subscriber Agreement located here: <a href="http://store.steampowered.com/subscriber_agreement/">http://store.steampowered.com/subscriber_agreement/</a> </p>
+
+<p>You may copy, modify, and distribute the SDK and any modifications you make to the 
+SDK in source and object code form, but only for free.  Any distribution of this SDK must 
+include this LICENSE file and thirdpartylegalnotices.txt.  </p>
+
+<p>Any distribution of the SDK or a substantial portion of the SDK must include the above 
+copyright notice and the following: </p>
+
+<pre><code>DISCLAIMER OF WARRANTIES.  THE SOURCE SDK AND ANY 
+OTHER MATERIAL DOWNLOADED BY LICENSEE IS PROVIDED 
+"AS IS".  VALVE AND ITS SUPPLIERS DISCLAIM ALL 
+WARRANTIES WITH RESPECT TO THE SDK, EITHER EXPRESS 
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED 
+WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, 
+TITLE AND FITNESS FOR A PARTICULAR PURPOSE.  
+
+LIMITATION OF LIABILITY.  IN NO EVENT SHALL VALVE OR 
+ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, 
+INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER 
+(INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF 
+BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF 
+BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) 
+ARISING OUT OF THE USE OF OR INABILITY TO USE THE 
+ENGINE AND/OR THE SDK, EVEN IF VALVE HAS BEEN 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  
+</code></pre>
+
+<p>If you would like to use the SDK for a commercial purpose, please contact Valve at 
+<a href="mailto:sourceengine@valvesoftware.com">sourceengine@valvesoftware.com</a>.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

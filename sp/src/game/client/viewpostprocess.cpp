@@ -34,6 +34,15 @@ float g_flCustomAutoExposureMax = 0;
 float g_flCustomBloomScale = 0.0f;
 float g_flCustomBloomScaleMinimum = 0.0f;
 
+// mapmaker controlled depth of field
+bool  g_bDOFEnabled = false;
+float g_flDOFNearBlurDepth = 50.0f;
+float g_flDOFNearFocusDepth = 200.0f;
+float g_flDOFFarFocusDepth = 250.0f;
+float g_flDOFFarBlurDepth = 1000.0f;
+float g_flDOFNearBlurRadius = 0.0f;
+float g_flDOFFarBlurRadius = 5.0f;
+
 bool g_bFlashlightIsOn = false;
 
 // hdr parameters

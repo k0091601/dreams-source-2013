@@ -124,6 +124,8 @@
 #include "client_virtualreality.h"
 #include "mumble.h"
 
+#include "fmod/fmodmanager.h"
+
 // NVNT includes
 #include "hud_macros.h"
 #include "haptics/ihaptics.h"
@@ -726,7 +728,7 @@ public:
 private:
 	void UncacheAllMaterials( );
 	void ResetStringTablePointers();
-
+	
 	CUtlVector< IMaterial * > m_CachedMaterials;
 };
 
@@ -1044,6 +1046,9 @@ int CHLClient::Init( CreateInterfaceFn appSystemFactory, CreateInterfaceFn physi
 
 	g_pClientMode->Enable();
 
+	// FMOD - Start 'er up!
+	FMODManager()->InitFMOD();
+
 	if ( !view )
 	{
 		view = ( IViewRender * )&g_DefaultViewRender;
@@ -1193,6 +1198,9 @@ void CHLClient::Shutdown( void )
 
 	g_pClientMode->Disable();
 	g_pClientMode->Shutdown();
+	
+	// FMOD - Shut us down
+	FMODManager()->ExitFMOD();
 
 	input->Shutdown_All();
 	C_BaseTempEntity::ClearDynamicTempEnts();
@@ -1734,6 +1742,9 @@ void CHLClient::LevelShutdown( void )
 	ReleaseRenderTargets();
 #endif
 
+	// FMOD: S:O - Stop all FMOD sounds when exiting to the main menu
+	FMODManager()->Stop();
+	
 	// string tables are cleared on disconnect from a server, so reset our global pointers to NULL
 	ResetStringTablePointers();
 

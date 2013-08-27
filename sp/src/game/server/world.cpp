@@ -391,6 +391,10 @@ BEGIN_DATADESC( CWorld )
 	DEFINE_KEYFIELD( m_flMinPropScreenSpaceWidth, FIELD_FLOAT, "minpropscreenwidth" ),
 	DEFINE_KEYFIELD( m_iszDetailSpriteMaterial, FIELD_STRING, "detailmaterial" ),
 	DEFINE_KEYFIELD( m_bColdWorld,		FIELD_BOOLEAN, "coldworld" ),
+	
+	//FMOD
+	DEFINE_KEYFIELD( m_sFMODFile, FIELD_STRING, "FMODFile" ),
+	DEFINE_KEYFIELD( m_sFMODEvent, FIELD_STRING, "FMODEvent" ),
 
 END_DATADESC()
 
@@ -407,6 +411,11 @@ IMPLEMENT_SERVERCLASS_ST(CWorld, DT_WORLD)
 	SendPropFloat	(SENDINFO(m_flMinPropScreenSpaceWidth), 0, SPROP_NOSCALE ),
 	SendPropStringT (SENDINFO(m_iszDetailSpriteMaterial) ),
 	SendPropInt		(SENDINFO(m_bColdWorld), 1, SPROP_UNSIGNED ),
+	
+	//FMOD
+	SendPropStringT (SENDINFO(m_sFMODFile) ),
+	SendPropStringT (SENDINFO(m_sFMODEvent) ),
+	
 END_SEND_TABLE()
 
 //

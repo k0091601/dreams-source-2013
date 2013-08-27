@@ -13,6 +13,8 @@
 #include "ivieweffects.h"
 #include "shake.h"
 #include "eventlist.h"
+//FMOD
+#include "fmod/fmodmanager.h"
 // NVNT haptic include for notification of world precache
 #include "haptics/haptic_utils.h"
 // memdbgon must be the last include file in a .cpp file!!!
@@ -59,6 +61,11 @@ BEGIN_RECV_TABLE( C_World, DT_World )
 	RecvPropFloat(RECVINFO(m_flMinPropScreenSpaceWidth)),
 	RecvPropString(RECVINFO(m_iszDetailSpriteMaterial)),
 	RecvPropInt(RECVINFO(m_bColdWorld)),
+	
+	//FMOD
+	RecvPropString(RECVINFO(m_sFMODFile)),
+	RecvPropString(RECVINFO(m_sFMODEvent)),	
+	
 END_RECV_TABLE()
 
 
@@ -119,6 +126,11 @@ void C_World::OnDataChanged( DataUpdateType_t updateType )
 		engine->SetOcclusionParameters( params );
 
 		modelinfo->SetLevelScreenFadeRange( m_flMinPropScreenSpaceWidth, m_flMaxPropScreenSpaceWidth );
+		
+		// Load FMOD file
+		FMODManager()->LoadDesignerFile(m_sFMODFile);
+		FMODManager()->SetEvent(m_sFMODEvent);
+		
 	}
 }
 

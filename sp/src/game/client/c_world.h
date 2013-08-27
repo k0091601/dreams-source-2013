@@ -41,6 +41,10 @@ public:
 	float GetWaveHeight() const;
 	const char *GetDetailSpriteMaterial() const;
 
+	//FMOD 
+	const char *GetFMODFile() const;
+	
+	
 public:
 	enum
 	{
@@ -60,6 +64,10 @@ public:
 private:
 	void	RegisterSharedActivities( void );
 	char	m_iszDetailSpriteMaterial[MAX_DETAIL_SPRITE_MATERIAL_NAME_LENGTH];
+	//FMOD
+	char	m_sFMODFile[512];
+	char	m_sFMODEvent[512];	
+
 };
 
 inline float C_World::GetWaveHeight() const
@@ -71,6 +79,13 @@ inline const char *C_World::GetDetailSpriteMaterial() const
 {
 	return m_iszDetailSpriteMaterial;
 }
+
+//FMOD
+inline const char *C_World::GetFMODFile() const
+{
+	return m_sFMODFile;
+}
+
 
 void ClientWorldFactoryInit();
 void ClientWorldFactoryShutdown();

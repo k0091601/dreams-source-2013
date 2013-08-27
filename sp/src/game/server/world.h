@@ -70,6 +70,11 @@ private:
 	CNetworkVar( bool, m_bStartDark );
 	CNetworkVar( bool, m_bColdWorld );
 	bool m_bDisplayTitle;
+	
+	//FMOD
+	CNetworkVar( string_t, m_sFMODFile );
+	CNetworkVar( string_t, m_sFMODEvent );	
+
 };
 
 

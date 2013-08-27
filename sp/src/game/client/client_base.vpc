@@ -46,7 +46,7 @@ $Configuration
 {
 	$Compiler
 	{
-		$AdditionalIncludeDirectories	".\;$BASE;$SRCDIR\vgui2\include;$SRCDIR\vgui2\controls;$SRCDIR\game\shared;.\game_controls;$SRCDIR\thirdparty\sixensesdk\include"
+		$AdditionalIncludeDirectories	".\;$BASE;$SRCDIR\vgui2\include;$SRCDIR\vgui2\controls;$SRCDIR\game\shared;.\game_controls;$SRCDIR\thirdparty\sixensesdk\include;$SRCDIR\thirdparty\fmodex\api\inc;$SRCDIR\thirdparty\fmodex\fmoddesignerapi\api\inc"
 		$PreprocessorDefinitions		"$BASE;NO_STRING_T;CLIENT_DLL;VECTOR;VERSION_SAFE_STEAM_API_INTERFACES;PROTECTED_THINGS_ENABLE;SOURCE_2013;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead" 
 		$PreprocessorDefinitions		"$BASE;ENABLE_CHROMEHTMLWINDOW;fopen=dont_use_fopen" [$WIN32]
 		$PreprocessorDefinitions		"$BASE;ENABLE_CHROMEHTMLWINDOW;" [$OSXALL]
@@ -520,7 +520,14 @@ $Project
 				//$File	"$SRCDIR\game\client\ShaderEditor\Grass\CGrassCluster.cpp"
 			}
 		}
+		
+		$Folder	"FMod" [$WIN32]
+		{		
+			$File	"$SRCDIR\game\client\fmod\fmodmanager.cpp"
+			$File	"$SRCDIR\game\client\fmod\fmodmanager.h"
 
+		}
+		
 		$Folder	"Sixense"
 		{
 			$File	"sixense\in_sixense.cpp"
@@ -1269,6 +1276,9 @@ $Project
 		$DynamicFile	"$SRCDIR\lib\public\steam_api.lib"
 		$DynamicFile	"$SRCDIR\lib\public\vtf.lib"
 		$DynamicFile	"$SRCDIR\lib\win32\release\libcurl.lib"	[$BUILD_REPLAY]
+		$DynamicFile	"$SRCDIR\lib\public\fmodex_vc.lib"
+		$DynamicFile	"$SRCDIR\lib\public\fmod_event.lib"
+		$DynamicFile	"$SRCDIR\lib\public\fmod_event_net.lib"
 	}
 
 	$Folder	"Link Libraries" [$X360]

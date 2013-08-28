@@ -30,6 +30,11 @@ $Project "glview"
 	"utils\glview\glview.vpc" [$WIN32]
 }
 
+$Project "luabind"
+{
+	"utils\luabind\luabind.vpc" [$WIN32]
+}
+
 $Project "height2normal"
 {
 	"utils\height2normal\height2normal.vpc" [$WIN32]

@@ -1279,6 +1279,7 @@ $Project
 		$DynamicFile	"$SRCDIR\lib\public\fmodex_vc.lib"
 		$DynamicFile	"$SRCDIR\lib\public\fmod_event.lib"
 		$DynamicFile	"$SRCDIR\lib\public\fmod_event_net.lib"
+		$DynamicFile	"$SRCDIR\lib\public\luabind.lib"
 	}
 
 	$Folder	"Link Libraries" [$X360]

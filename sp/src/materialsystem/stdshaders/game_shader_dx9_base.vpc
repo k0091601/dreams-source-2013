@@ -58,6 +58,10 @@ $Project
 		$File	"screenspace_general.cpp"
 		
 		$File "DepthOfField_dx9.cpp"
+		$File "parallaxtest.cpp"
+
+		//$File "post_blur.cpp"
+		//$File "post_dof.cpp"		
 		
 		//$File "multiblend.cpp"
 		//$File "multiblend_dx9_helper.cpp"

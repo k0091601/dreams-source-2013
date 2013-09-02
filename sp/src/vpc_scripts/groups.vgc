@@ -21,7 +21,7 @@ $Group "game"
 	"server"
 	"tier1"
 	"vgui_controls"
-	"luabind"
+
 }
 
 $Group "shaders"

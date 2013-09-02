@@ -9,3 +9,5 @@
 
 // There are no examples of such shaders in the SDK, but add yours here.
 
+parallaxtest_ps30.fxc
+parallaxtest_vs30.fxc
